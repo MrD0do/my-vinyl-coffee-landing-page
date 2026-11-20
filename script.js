@@ -1,14 +1,3 @@
-/* ==========================================================================
-   AFTERNIGHT ESPRESSO — Interaktivní JavaScript (Vanilla ES6+)
-   1. Přepínač Day / Night režimu s čistými obrysovými SVG ikonami
-   2. Responzivní mobilní navigace
-   3. Scroll-reveal animace (IntersectionObserver)
-   4. Filtrování nápojového lístku + interaktivní výběr položek (Tasting Tray)
-   5. Lightbox galerie s procházením šipkami
-   6. Custom výběr data, času a počtu osob v rezervaci + <dialog> potvrzení
-   7. Aktuální stav kavárny v patičce
-   ========================================================================== */
-
 document.addEventListener("DOMContentLoaded", () => {
     initThemeToggle();
     initMobileNav();
@@ -19,7 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
     initOpenStatus();
 });
 
-/* 1. Přepínač Day / Night režimu (čisté obrysové SVG ikony) */
+/* přepínač day / night režimu  */
 function initThemeToggle() {
     const toggleBtn = document.querySelector("#theme-toggle");
     const root = document.documentElement;
@@ -61,7 +50,7 @@ function initThemeToggle() {
     }
 }
 
-/* 2. Mobilní menu */
+/* hamburger menu na mobilu */
 function initMobileNav() {
     const toggle = document.querySelector(".nav-toggle");
     const navList = document.querySelector(".nav-list");
@@ -73,7 +62,7 @@ function initMobileNav() {
     });
 }
 
-/* 3. Scroll-reveal animace */
+/* scroll-reveal animace */
 function initScrollReveal() {
     const elements = document.querySelectorAll(".reveal");
     if (!elements.length) return;
@@ -93,7 +82,7 @@ function initScrollReveal() {
     elements.forEach((el) => observer.observe(el));
 }
 
-/* 4. Filtrování nápojového lístku + interaktivní výběr položek */
+/* filtrování nápojového lístku + interaktivní výběr položek */
 function initMenuInteractive() {
     const filterButtons = document.querySelectorAll(".filter-btn");
     const menuItems = document.querySelectorAll(".menu-item");
@@ -118,7 +107,7 @@ function initMenuInteractive() {
         });
     });
 
-    // Interaktivní počítadlo položek na večer
+    // interaktivní počítadlo položek na večer
     const selection = new Map();
 
     menuItems.forEach((item) => {
@@ -192,7 +181,7 @@ function initMenuInteractive() {
     }
 }
 
-/* 5. Lightbox ve fotogalerii s procházením šipkami */
+/* lightbox ve fotogalerii s procházením šipkami */
 function initLightbox() {
     const galleryItems = Array.from(document.querySelectorAll(".gallery-item"));
     const lightbox = document.querySelector("#lightbox");
@@ -252,7 +241,7 @@ function initLightbox() {
     });
 }
 
-/* 6. Custom výběr data, času a počtu osob + potvrzení v <dialog> */
+/* custom výběr data, času a počtu osob + potvrzení v <dialog> */
 function initCustomBooking() {
     const form = document.querySelector("#booking-form");
     const dateContainer = document.querySelector("#date-pills");
@@ -264,7 +253,7 @@ function initCustomBooking() {
 
     if (!form || !dateContainer || !timeContainer || !guestContainer) return;
 
-    // Předvyplnění výběru z nápojového lístku, pokud si uživatel něco naklikal
+    // předvyplnění výběru z nápojového lístku, pokud si uživatel něco naklikal
     const savedOrder = sessionStorage.getItem("afternight-order");
     if (savedOrder && noteInput && !noteInput.value) {
         noteInput.value = `Předběžný výběr z lístku: ${savedOrder}`;
@@ -275,7 +264,7 @@ function initCustomBooking() {
     let selectedTime = "";
     let selectedGuests = "2 osoby";
 
-    // Generování nejbližších 7 dnů (pondělí automaticky zamčené = zavřeno)
+    // vygenerování nejbližších 7 dnů (pondělí automaticky zamčené = zavřeno)
     const dayNames = ["Ne", "Po", "Út", "St", "Čt", "Pá", "So"];
     const today = new Date();
     let firstOpenAssigned = false;
@@ -311,7 +300,7 @@ function initCustomBooking() {
         dateContainer.appendChild(btn);
     }
 
-    // Generování časových slotů
+    // vygenerování časových slotů
     const slots = ["15:00", "16:30", "18:00", "19:00", "20:00", "21:00", "22:00", "23:00"];
     slots.forEach((time, idx) => {
         const btn = document.createElement("button");
@@ -332,7 +321,7 @@ function initCustomBooking() {
         timeContainer.appendChild(btn);
     });
 
-    // Výběr počtu osob
+    // výběr počtu osob
     guestContainer.querySelectorAll(".guest-pill").forEach((btn) => {
         btn.addEventListener("click", () => {
             guestContainer.querySelectorAll(".guest-pill").forEach((g) => g.classList.remove("active"));
@@ -341,7 +330,7 @@ function initCustomBooking() {
         });
     });
 
-    // Odeslání a validace formuláře
+    // odeslání a validace formuláře
     form.addEventListener("submit", (e) => {
         e.preventDefault();
         let valid = true;
@@ -378,7 +367,7 @@ function initCustomBooking() {
     }
 }
 
-/* 7. Aktuální stav kavárny v patičce */
+/* live status otevirací doby kavárny v patičce */
 function initOpenStatus() {
     const badge = document.querySelector("#open-status");
     if (!badge) return;
