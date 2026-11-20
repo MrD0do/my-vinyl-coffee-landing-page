@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Nápojový lístek Afternight Espresso — výběrová káva, matcha, večerní drinky a dezerty.">
+    <link rel="icon"
+        href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E☕%3C/text%3E%3C/svg%3E">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=IBM+Plex+Mono:wght@400;500&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap"
+        rel="stylesheet">
+    <title>Nápojový lístek | Afternight Espresso</title>
+    <script>
+        if (localStorage.getItem("afternight-theme") === "dark") {
+            document.documentElement.setAttribute("data-theme", "dark");
+        }
+    </script>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <header class="site-header">
+        <div class="container nav-wrapper">
+            <a href="index.html" class="logo">Afternight <span>espresso</span></a>
+            <div class="nav-controls">
+                <nav aria-label="Hlavní navigace">
+                    <ul class="nav-list">
+                        <li><a href="index.html" class="nav-link">Domů</a></li>
+                        <li><a href="o-nas.html" class="nav-link">O nás</a></li>
+                        <li><a href="menu.html" class="nav-link active">Nápojový lístek</a></li>
+                        <li><a href="galerie.html" class="nav-link">Fotogalerie</a></li>
+                        <li><a href="kontakt.html" class="nav-link">Kontakt</a></li>
+                    </ul>
+                </nav>
+                <button type="button" class="theme-toggle" id="theme-toggle"
+                    aria-label="Přepnout barevný režim"></button>
+                <button type="button" class="nav-toggle" aria-label="Otevřít menu" aria-expanded="false">☰</button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="section">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="eyebrow">Aktuální nabídka</span>
+                    <h1>Nápojový lístek</h1>
+                    <p>Všechny kávové nápoje připravujeme i ve večerní bezkofeinové variantě. Pomocí tlačítek
+                        <strong>+</strong> si můžete sestavit svůj předběžný výběr na večer.
+                    </p>
+                </div>
+
+                <div class="filter-bar reveal" role="group" aria-label="Filtrovat nápoje podle kategorie">
+                    <button type="button" class="filter-btn active" data-filter="all">Vše v nabídce</button>
+                    <button type="button" class="filter-btn" data-filter="coffee">Výběrová káva</button>
+                    <button type="button" class="filter-btn" data-filter="signature">Noční Signature</button>
+                    <button type="button" class="filter-btn" data-filter="tea">Matcha & Čaj</button>
+                    <button type="button" class="filter-btn" data-filter="dessert">Dezerty</button>
+                </div>
+
+                <div class="menu-grid">
+                    <article class="menu-item reveal" data-category="coffee" data-name="Double Espresso"
+                        data-price="69">
+                        <div>
+                            <h2 class="menu-item-title">Double Espresso</h2>
+                            <p class="menu-item-desc">Etiopie Guji — tóny jasmínu, zralých broskví a mléčné čokolády
+                                (18 g).</p>
+                        </div>
+                        <div class="menu-item-actions">
+                            <span class="menu-item-price">69 Kč</span>
+                            <div class="qty-control">
+                                <button type="button" class="qty-btn qty-minus"
+                                    aria-label="Odebrat Double Espresso">−</button>
+                                <span class="qty-count">0</span>
+                                <button type="button" class="qty-btn qty-plus"
+                                    aria-label="Přidat Double Espresso">+</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="menu-item reveal" data-category="coffee" data-name="Flat White" data-price="89">
+                        <div>
+                            <h2 class="menu-item-title">Flat White</h2>
+                            <p class="menu-item-desc">Dvojité espresso se sametovou mikropěnou z bio farmářského mléka
+                                nebo ovesného nápoje.</p>
+                        </div>
+                        <div class="menu-item-actions">
+                            <span class="menu-item-price">89 Kč</span>
+                            <div class="qty-control">
+                                <button type="button" class="qty-btn qty-minus"
+                                    aria-label="Odebrat Flat White">−</button>
+                                <span class="qty-count">0</span>
+                                <button type="button" class="qty-btn qty-plus" aria-label="Přidat Flat White">+</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="menu-item reveal" data-category="coffee" data-name="Batch Brew / V60"
+                        data-price="85">
+                        <div>
+                            <h2 class="menu-item-title">Batch Brew / V60</h2>
+                            <p class="menu-item-desc">Filtrovaná káva dne podle aktuálního výběru naší pražírny
+                                (250 ml).</p>
+                        </div>
+                        <div class="menu-item-actions">
+                            <span class="menu-item-price">85 Kč</span>
+                            <div class="qty-control">
+                                <button type="button" class="qty-btn qty-minus"
+                                    aria-label="Odebrat Batch Brew">−</button>
+                                <span class="qty-count">0</span>
+                                <button type="button" class="qty-btn qty-plus" aria-label="Přidat Batch Brew">+</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="menu-item reveal" data-category="signature" data-name="Midnight Espresso Tonic"
+                        data-price="115">
+                        <div>
+                            <h2 class="menu-item-title">Midnight Espresso Tonic</h2>
+                            <p class="menu-item-desc">Dvojité espresso, řemeslný botanický tonic, kůra z červeného
+                                pomeranče a snítka rozmarýnu.</p>
+                        </div>
+                        <div class="menu-item-actions">
+                            <span class="menu-item-price">115 Kč</span>
+                            <div class="qty-control">
+                                <button type="button" class="qty-btn qty-minus"
+                                    aria-label="Odebrat Midnight Espresso Tonic">−</button>
+                                <span class="qty-count">0</span>
+                                <button type="button" class="qty-btn qty-plus"
+                                    aria-label="Přidat Midnight Espresso Tonic">+</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="menu-item reveal" data-category="signature" data-name="Velvet Vinyl Negroni (0.0 %)"
+                        data-price="135">
+                        <div>
+                            <h2 class="menu-item-title">Velvet Vinyl Negroni (0.0 %)</h2>
+                            <p class="menu-item-desc">Cold-drip káva, nealkoholický hořký aperitiv, červený vermut
+                                a špetka kouřové soli.</p>
+                        </div>
+                        <div class="menu-item-actions">
+                            <span class="menu-item-price">135 Kč</span>
+                            <div class="qty-control">
+                                <button type="button" class="qty-btn qty-minus"
+                                    aria-label="Odebrat Velvet Vinyl Negroni">−</button>
+                                <span class="qty-count">0</span>
+                                <button type="button" class="qty-btn qty-plus"
+                                    aria-label="Přidat Velvet Vinyl Negroni">+</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="menu-item reveal" data-category="tea" data-name="Ceremonial Matcha Latte"
+                        data-price="105">
+                        <div>
+                            <h2 class="menu-item-title">Ceremonial Matcha Latte</h2>
+                            <p class="menu-item-desc">První sklizeň Uji Matcha vyšlehaná bambusovou metličkou s teplým
+                                či ledovým mlékem.</p>
+                        </div>
+                        <div class="menu-item-actions">
+                            <span class="menu-item-price">105 Kč</span>
+                            <div class="qty-control">
+                                <button type="button" class="qty-btn qty-minus"
+                                    aria-label="Odebrat Matcha Latte">−</button>
+                                <span class="qty-count">0</span>
+                                <button type="button" class="qty-btn qty-plus"
+                                    aria-label="Přidat Matcha Latte">+</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="menu-item reveal" data-category="tea" data-name="Cascara Fizz" data-price="95">
+                        <div>
+                            <h2 class="menu-item-title">Cascara Fizz</h2>
+                            <p class="menu-item-desc">Perlivý nálev ze sušených kávových třešní s čerstvou limetkou
+                                a kapkou květového medu.</p>
+                        </div>
+                        <div class="menu-item-actions">
+                            <span class="menu-item-price">95 Kč</span>
+                            <div class="qty-control">
+                                <button type="button" class="qty-btn qty-minus"
+                                    aria-label="Odebrat Cascara Fizz">−</button>
+                                <span class="qty-count">0</span>
+                                <button type="button" class="qty-btn qty-plus"
+                                    aria-label="Přidat Cascara Fizz">+</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="menu-item reveal" data-category="dessert" data-name="Cardamom Bun" data-price="79">
+                        <div>
+                            <h2 class="menu-item-title">Cardamom Bun</h2>
+                            <p class="menu-item-desc">Čerstvě pečený skandinávský uzel s máslem a čerstvě drceným
+                                zeleným kardamomem.</p>
+                        </div>
+                        <div class="menu-item-actions">
+                            <span class="menu-item-price">79 Kč</span>
+                            <div class="qty-control">
+                                <button type="button" class="qty-btn qty-minus"
+                                    aria-label="Odebrat Cardamom Bun">−</button>
+                                <span class="qty-count">0</span>
+                                <button type="button" class="qty-btn qty-plus"
+                                    aria-label="Přidat Cardamom Bun">+</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="menu-item reveal" data-category="dessert" data-name="Espresso Tiramisu"
+                        data-price="119">
+                        <div>
+                            <h2 class="menu-item-title">Espresso Tiramisu</h2>
+                            <p class="menu-item-desc">Domácí cukrářské piškoty máčené v našem espressu, jemný mascarpone
+                                krém a holandské kakao.</p>
+                        </div>
+                        <div class="menu-item-actions">
+                            <span class="menu-item-price">119 Kč</span>
+                            <div class="qty-control">
+                                <button type="button" class="qty-btn qty-minus"
+                                    aria-label="Odebrat Espresso Tiramisu">−</button>
+                                <span class="qty-count">0</span>
+                                <button type="button" class="qty-btn qty-plus"
+                                    aria-label="Přidat Espresso Tiramisu">+</button>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Plovoucí lišta vybraných položek -->
+    <aside class="tray-bar" id="tray-bar" aria-live="polite">
+        <div class="tray-summary" id="tray-text"></div>
+        <div class="tray-buttons">
+            <button type="button" class="btn btn-outline btn-sm" id="tray-clear">Vymazat</button>
+            <button type="button" class="btn btn-primary btn-sm" id="tray-reserve">Přenést do rezervace</button>
+        </div>
+    </aside>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <a href="index.html" class="logo">Afternight <span>espresso</span></a>
+                    <p class="footer-desc">Výběrová káva a poslechový vinyl bar v centru Ostravy.</p>
+                    <p id="open-status" class="footer-status"></p>
+                </div>
+                <div>
+                    <h3>Navigace</h3>
+                    <ul class="footer-links">
+                        <li><a href="o-nas.html">O nás</a></li>
+                        <li><a href="menu.html">Nápojový lístek</a></li>
+                        <li><a href="galerie.html">Fotogalerie</a></li>
+                        <li><a href="kontakt.html">Kontakt</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Otevírací doba</h3>
+                    <p class="footer-desc">
+                        Út – Čt: 14:00 – 00:00<br>
+                        Pá – So: 14:00 – 01:00<br>
+                        Ne: 15:00 – 22:00 (Po zavřeno)
+                    </p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <span>© 2026 Afternight Espresso. Všechna práva vyhrazena.</span>
+                <span>Vytvořeno pro předmět ZIT — Čisté HTML5, CSS3 & JS</span>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

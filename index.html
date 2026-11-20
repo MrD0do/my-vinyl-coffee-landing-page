@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Afternight Espresso — výběrová káva, večerní pohoda a poslechový vinyl bar v centru Ostravy.">
+    <link rel="icon"
+        href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E☕%3C/text%3E%3C/svg%3E">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=IBM+Plex+Mono:wght@400;500&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap"
+        rel="stylesheet">
+    <title>Afternight Espresso | Káva & Vinyl Listening Bar</title>
+    <script>
+        if (localStorage.getItem("afternight-theme") === "dark") {
+            document.documentElement.setAttribute("data-theme", "dark");
+        }
+    </script>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <header class="site-header">
+        <div class="container nav-wrapper">
+            <a href="index.html" class="logo">Afternight <span>espresso</span></a>
+            <div class="nav-controls">
+                <nav aria-label="Hlavní navigace">
+                    <ul class="nav-list">
+                        <li><a href="./index.html" class="nav-link active">Domů</a></li>
+                        <li><a href="./o-nas.html" class="nav-link">O nás</a></li>
+                        <li><a href="./menu.html" class="nav-link">Nápojový lístek</a></li>
+                        <li><a href="./galerie.html" class="nav-link">Fotogalerie</a></li>
+                        <li><a href="./kontakt.html" class="nav-link">Kontakt</a></li>
+                    </ul>
+                </nav>
+                <button type="button" class="theme-toggle" id="theme-toggle"
+                    aria-label="Přepnout barevný režim"></button>
+                <button type="button" class="nav-toggle" aria-label="Otevřít menu" aria-expanded="false">☰</button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container hero-grid">
+                <div class="hero-text reveal">
+                    <span class="eyebrow">Výběrová káva & Analogový zvuk</span>
+                    <h1>Místo, kde odpolední espresso plynule přechází v noční poslech vinylů.</h1>
+                    <p>
+                        Vítejte v Afternight Espresso. Spojujeme poctivou přípravu výběrové kávy,
+                        večerní nealkoholické drinky a klidný poslechový bar s kurátorovanou sbírkou jazzových
+                        a soulových desek.
+                    </p>
+                    <div class="hero-actions">
+                        <a href="./menu.html" class="btn btn-primary">Prohlédnout lístek</a>
+                        <a href="./kontakt.html" class="btn btn-outline">Rezervovat stůl</a>
+                    </div>
+                </div>
+
+                <div class="reveal">
+                    <img src="https://images.unsplash.com/photo-1511920170033-f8396924c348?auto=format&fit=crop&w=1000&q=80"
+                        alt="Šálek čerstvého espressa na dřevěném stole v kavárně" class="hero-img">
+                </div>
+            </div>
+        </section>
+
+        <div class="marquee" aria-hidden="true">
+            <div class="marquee-track">
+                VÝBĚROVÁ KÁVA <span>✦</span> ANALOGOVÝ VINYL BAR <span>✦</span> VEČERNÍ SIGNATURE DRINKY <span>✦</span>
+                OTEVŘENO DO PŮLNOCI <span>✦</span>
+                VÝBĚROVÁ KÁVA <span>✦</span> ANALOGOVÝ VINYL BAR <span>✦</span> VEČERNÍ SIGNATURE DRINKY <span>✦</span>
+                OTEVŘENO DO PŮLNOCI <span>✦</span>
+            </div>
+        </div>
+
+        <section class="section">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="eyebrow">Náš koncept</span>
+                    <h2>Tři důvody, proč u nás zůstat až do noci</h2>
+                    <p>Vytvořili jsme prostor, kde nemusíte v šest večer vyměnit skvělý šálek kávy za hlučný klub.</p>
+                </div>
+
+                <div class="grid-3">
+                    <article class="card reveal">
+                        <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=800&q=80"
+                            alt="Příprava filtrované kávy V60" class="card-img" loading="lazy">
+                        <div class="card-body">
+                            <span class="tag">01 / Káva</span>
+                            <h3>Mikroloty & Večerní Decaf</h3>
+                            <p>Pražíme vlastní výběrové směsi i bezkofeinovou Kolumbii zpracovanou cukrovou třtinou,
+                                takže si espresso vychutnáte i v jedenáct večer.</p>
+                        </div>
+                    </article>
+
+                    <article class="card reveal">
+                        <img src="https://images.unsplash.com/photo-1603048588665-791ca8aea617?auto=format&fit=crop&w=800&q=80"
+                            alt="Detail gramofonu a vinylové desky" class="card-img" loading="lazy">
+                        <div class="card-body">
+                            <span class="tag">02 / Zvuk</span>
+                            <h3>Analogový Hi-Fi systém</h3>
+                            <p>Každý večer od 19:00 pouštíme celé desky z naší sbírky na zakázkových reproduktorech
+                                s hřejivým lampovým zvukem.</p>
+                        </div>
+                    </article>
+
+                    <article class="card reveal">
+                        <img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=800&q=80"
+                            alt="Sklenice ledového espresso tonicu" class="card-img" loading="lazy">
+                        <div class="card-body">
+                            <span class="tag">03 / Alchymie</span>
+                            <h3>Večerní kávové drinky</h3>
+                            <p>Cascara spritz, cold brew s yuzu nebo nealkoholické espresso martini připravené z naší
+                                pomalé cold-drip extrakce.</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section-alt">
+            <div class="container grid-2">
+                <div class="reveal">
+                    <img src="https://images.unsplash.com/photo-1516280440614-37939bbacd81?auto=format&fit=crop&w=950&q=80"
+                        alt="Kurátorovaná sbírka vinylových desek v kavárně" class="feature-img" loading="lazy">
+                </div>
+
+                <div class="reveal">
+                    <span class="eyebrow">Vinyl Listening Culture</span>
+                    <h2>Hudba, která není jen kulisou</h2>
+                    <p class="lead-text">
+                        Srdcem našeho baru je analogová sestava s gramofonem Technics SL-1200G, lampovým předzesilovačem
+                        a policí s více než 600 pečlivě vybranými LP deskami — od japonského jazzu 70. let po současný
+                        ambient a neo-soul.
+                    </p>
+                    <p class="lead-text">
+                        Zastavte se vybrat desku z našeho katalogu, nebo si přineste vlastní vinyl z domova a nechte ho
+                        rozeznít přes náš zvukový systém.
+                    </p>
+
+                    <div class="vinyl-schedule">
+                        <div class="schedule-row">
+                            <span class="schedule-day">Út – St / 19:00</span>
+                            <span class="schedule-genre">Ambient, Lo-Fi Beats & klidné večerní čtení</span>
+                        </div>
+                        <div class="schedule-row">
+                            <span class="schedule-day">Čtvrtek / 20:00</span>
+                            <span class="schedule-genre">Album Listening Night (celé LP od začátku do konce)</span>
+                        </div>
+                        <div class="schedule-row">
+                            <span class="schedule-day">Pá – So / 20:30</span>
+                            <span class="schedule-genre">Late-Night Jazz, Soul & Vinyl Selectors</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Vycentrovaná sekce Často kladených dotazů -->
+        <section class="section">
+            <div class="container">
+                <div class="section-header section-header-center reveal">
+                    <span class="eyebrow">Praktické informace</span>
+                    <h2>Často se nás ptáte</h2>
+                    <p>Vše, co se hodí vědět před vaší první večerní návštěvou.</p>
+                </div>
+
+                <div class="faq-list reveal">
+                    <details class="faq-item">
+                        <summary>Můžu si přinést vlastní vinylovou desku?</summary>
+                        <p>Určitě ano! Rádi vám ji pustíme na našem gramofonu. Stačí ji předat obsluze na baru —
+                            postaráme se o šetrné očištění kartáčkem a zařadíme ji do večerního programu.</p>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary>Máte v nabídce kávu bez kofeinu, když přijdu pozdě večer?</summary>
+                        <p>Ano, každý den máme na druhém mlýnku výběrovou bezkofeinovou kávu z Kolumbie zpracovanou
+                            šetrnou metodou cukrové třtiny. Připravíme vám z ní espresso, flat white i večerní espresso
+                            tonic.</p>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary>Je nutné mít rezervaci předem?</summary>
+                        <p>V odpoledních hodinách si u nás většinou sednete i bez rezervace. Na čtvrteční poslechové
+                            večery a víkendy po 19:00 ale doporučujeme rezervovat si stůl alespoň pár hodin dopředu.</p>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary>Dá se u vás večer pracovat na notebooku?</summary>
+                        <p>Od 14:00 do 18:30 jsou notebooky vítány. Po 19:00 však ztlumujeme světla a kavárna se mění
+                            v poslechový prostor, kde dáváme přednost rozhovorům a nerušené hudbě.</p>
+                    </details>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <a href="./index.html" class="logo">Afternight <span>espresso</span></a>
+                    <p class="footer-desc">Výběrová káva a poslechový vinyl bar v centru Ostravy.</p>
+                    <p id="open-status" class="footer-status"></p>
+                </div>
+                <div>
+                    <h3>Navigace</h3>
+                    <ul class="footer-links">
+                        <li><a href="./o-nas.html">O nás</a></li>
+                        <li><a href="./menu.html">Nápojový lístek</a></li>
+                        <li><a href="./galerie.html">Fotogalerie</a></li>
+                        <li><a href="./kontakt.html">Kontakt</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Otevírací doba</h3>
+                    <p class="footer-desc">
+                        Út – Čt: 14:00 – 00:00<br>
+                        Pá – So: 14:00 – 01:00<br>
+                        Ne: 15:00 – 22:00 (Po zavřeno)
+                    </p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <span>© 2026 Afternight Espresso. Všechna práva vyhrazena.</span>
+                <span>Vytvořeno pro předmět ZIT — Čisté HTML5, CSS3 & JS</span>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

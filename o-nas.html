@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Příběh kavárny Afternight Espresso, naše pražírna a láska k analogovým vinylům.">
+    <link rel="icon"
+        href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E☕%3C/text%3E%3C/svg%3E">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=IBM+Plex+Mono:wght@400;500&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap"
+        rel="stylesheet">
+    <title>O nás | Afternight Espresso</title>
+    <script>
+        if (localStorage.getItem("afternight-theme") === "dark") {
+            document.documentElement.setAttribute("data-theme", "dark");
+        }
+    </script>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <header class="site-header">
+        <div class="container nav-wrapper">
+            <a href="index.html" class="logo">Afternight <span>espresso</span></a>
+            <div class="nav-controls">
+                <nav aria-label="Hlavní navigace">
+                    <ul class="nav-list">
+                        <li><a href="index.html" class="nav-link">Domů</a></li>
+                        <li><a href="o-nas.html" class="nav-link active">O nás</a></li>
+                        <li><a href="menu.html" class="nav-link">Nápojový lístek</a></li>
+                        <li><a href="galerie.html" class="nav-link">Fotogalerie</a></li>
+                        <li><a href="kontakt.html" class="nav-link">Kontakt</a></li>
+                    </ul>
+                </nav>
+                <button type="button" class="theme-toggle" id="theme-toggle"
+                    aria-label="Přepnout barevný režim"></button>
+                <button type="button" class="nav-toggle" aria-label="Otevřít menu" aria-expanded="false">☰</button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="section">
+            <div class="container grid-2">
+                <div class="reveal">
+                    <span class="eyebrow">Náš příběh</span>
+                    <h1>Kultura pomalého večera s šálkem v ruce.</h1>
+                    <p class="lead-text">
+                        Afternight Espresso vzniklo v roce 2024 z jednoduché otázky: proč většina skvělých výběrových
+                        kaváren zavírá v pět odpoledne,
+                        když teprve začíná ten nejlepší čas na klidný rozhovor, knihu nebo soustředěný poslech hudby?
+                    </p>
+                    <p class="lead-text">
+                        Inspirovali jsme se japonskými poslechovými podniky <em>Jazz Kissa</em>, kde je hudba
+                        rovnocenným partnerem kávy.
+                        U nás nenajdete spěch ani přeslazené sirupy — jen čistou chuť zrn, teplé tlumené světlo a jemné
+                        praskání jehly na vinylu.
+                    </p>
+                </div>
+                <div class="reveal">
+                    <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=900&q=80"
+                        alt="Interiér kavárny Afternight Espresso" class="feature-img">
+                </div>
+            </div>
+        </section>
+
+        <section class="section section-alt">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="eyebrow">Naše zásady</span>
+                    <h2>Na čem si zakládáme</h2>
+                </div>
+                <div class="grid-3">
+                    <article class="card reveal">
+                        <div class="card-body">
+                            <span class="tag">Direct Trade</span>
+                            <h3>Přímý původ zrn</h3>
+                            <p>Spolupracujeme s menšími farmáři z Etiopie, Kolumbie a Guatemaly. Každý pytel kávy má
+                                jasný původ i konkrétní sklizeň.</p>
+                        </div>
+                    </article>
+                    <article class="card reveal">
+                        <div class="card-body">
+                            <span class="tag">Akustika</span>
+                            <h3>Prostor vyladěný pro poslech</h3>
+                            <p>Interiér jsme navrhli z přírodního dubu, lnu a akustických panelů tak, aby hudba zněla
+                                čistě a nerušila váš rozhovor.</p>
+                        </div>
+                    </article>
+                    <article class="card reveal">
+                        <div class="card-body">
+                            <span class="tag">Komunita</span>
+                            <h3>Večerní poslechové seance</h3>
+                            <p>Každý čtvrtek pořádáme společný poslech jednoho kultovního alba od první do poslední
+                                drážky bez přerušení.</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <a href="index.html" class="logo">Afternight <span>espresso</span></a>
+                    <p class="footer-desc">Výběrová káva a poslechový vinyl bar v centru Ostravy.</p>
+                    <p id="open-status" class="footer-status"></p>
+                </div>
+                <div>
+                    <h3>Navigace</h3>
+                    <ul class="footer-links">
+                        <li><a href="o-nas.html">O nás</a></li>
+                        <li><a href="menu.html">Nápojový lístek</a></li>
+                        <li><a href="galerie.html">Fotogalerie</a></li>
+                        <li><a href="kontakt.html">Kontakt</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Otevírací doba</h3>
+                    <p class="footer-desc">
+                        Út – Čt: 14:00 – 00:00<br>
+                        Pá – So: 14:00 – 01:00<br>
+                        Ne: 15:00 – 22:00 (Po zavřeno)
+                    </p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <span>© 2026 Afternight Espresso. Všechna práva vyhrazena.</span>
+                <span>Vytvořeno pro předmět ZIT — Čisté HTML5, CSS3 & JS</span>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
